@@ -1,0 +1,97 @@
+
+    <head>
+
+		<style type="text/css">
+
+
+				@keyframes bell {
+				  0% { transform: rotate(0); }
+				  10% { transform: rotate(30deg); }
+				  20% { transform: rotate(0); }
+				  80% { transform: rotate(0); }
+				  90% { transform: rotate(-30deg); }
+				  100% { transform: rotate(0); }
+				}
+
+				@keyframes zoom {
+				  1% { opacity: 0; transform: scale(0); }
+				  10% { opacity: 1; transform: scale(1); }
+				  90% { opacity: 1; }
+				  100% { opacity: 0; }
+				}
+
+
+		</style>
+	</head>
+
+
+	<header class="header" id="header">
+	    <div class="header__toggle">
+	        <i class='bx bx-menu' id="header-toggle"></i>
+	    </div>
+
+	    <div class="notif">
+
+		    <div class="notif_body">
+		      <div class="notifications">
+
+				<div class="icon_wrap">
+				  <span class="notification-count"></span>
+				  <div class="notification-bell">
+				    <span class="bell-top"></span>
+				    <span class="bell-middle"></span>
+				    <span class="bell-bottom"></span>
+				    <span class="bell-rad"></span>
+				  </div>
+				</div>
+
+
+		      </div>
+
+		    </div>
+		</div>
+
+
+
+	</header>
+
+	<div class="l-navbar" id="nav-bar">
+	    <nav class="nav">
+	        <div>
+	            <a href="#" class="nav__logo">
+	                <i class='bx bx-layer nav__logo-icon'></i>
+	                <span class="nav__logo-name">HEALTH CARE</span>
+	            </a>
+
+	            <div class="nav__list">
+	                <a href="/CabinetMedicale/Home" class="nav__link active">
+	                <i class='bx bx-grid-alt nav__icon' ></i>
+	                    <span class="nav__name">Dashboard</span>
+	                </a>
+
+	                <a href="/CabinetMedicale/Patients" class="nav__link">
+	                    <i class='bx bx-user nav__icon' ></i>
+	                    <span class="nav__name">Patients</span>
+	                </a>
+
+	                <a href="/CabinetMedicale/RendezVous?type=A" class="nav__link">
+	                    <i class='bx bx-message-square-detail nav__icon' ></i>
+	                    <span class="nav__name">Rendez-vous</span>
+	                </a>
+
+	                <a href="/CabinetMedicale/RendezVous?type=H" class="nav__link">
+	                    <i class='bx bx-data nav__icon' ></i>
+	                    <span class="nav__name">Historique</span>
+	                </a>
+
+	            </div>
+	        </div>
+
+	        <a href="/CabinetMedicale/Logout" class="nav__link">
+	            <i class='bx bx-log-out nav__icon' ></i>
+	            <span class="nav__name">Se d�connecter</span>
+	        </a>
+	    </nav>
+	</div>
+
+

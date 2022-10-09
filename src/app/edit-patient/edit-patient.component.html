@@ -1,0 +1,68 @@
+
+<div id="layoutAuthentication">
+  <div id="layoutAuthentication_content">
+      <main>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-7">
+                      <div class="card shadow-lg border-0 rounded-lg mt-5">
+                          <div class="card-header"><h3 class="text-center font-weight-light my-4">Formulaire Ajout Patient</h3></div>
+                          <div class="card-body">
+
+<form>
+<div class="form-floating mb-3">
+<input [(ngModel)]="patient.numPatient" id="numPatient" type="text" class="form-control" name="numPatient" />
+<label for="numPatient">Numero_Patient</label>
+</div>
+<div class="row mb-3">
+<div class="col-md-6">
+    <div class="form-floating mb-3 mb-md-0">
+        <input [(ngModel)]="patient.nom" id="nom" type="text"  class="required form-control" name="nom" />
+        <label for="nom">Nom</label>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-floating">
+        <input [(ngModel)]="patient.prenom" id="prenom" type="text"  class="required form-control" name="prenom" />
+        <label for="prenom">Prenom</label>
+    </div>
+</div>
+</div>
+
+<div class="row mb-3">
+<div class="col-md-6">
+    <div class="form-floating mb-3 mb-md-0">
+        <input [(ngModel)]="patient.telephone" id="telephone" type="number"  class="required form-control" name="telephone" />
+        <label  for="telephone">Telephone</label>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="form-floating mb-3 mb-md-0">
+        <input [(ngModel)]="patient.fonction" id="fonction" type="text" class="form-control" name="fonction" />
+        <label  for="fonction">Fonction</label>
+    </div>
+</div>
+</div>
+<div class="form-floating mb-3">
+<input [(ngModel)]="patient.email" id="email" type="text" class="required email form-control" name="email">
+<label for="fonction">Email</label>
+</div>
+<div class="form-floating mb-3">
+<input  [(ngModel)]="patient.addresse" id="addresse" type="text"  class="required form-control" name="addresse" />
+<label for="addresse">Addresse</label>
+</div>
+<div class="mt-4 mb-0">
+<button class="btn btn-info" (click)="updatePatient()"><span>Save</span></button>
+<button  class="btn btn-danger"  (click)="cancel()"><span>Cancel</span>
+</button>
+</div>
+</form>
+
+
+<div class="card-footer" *ngIf="showAlert">
+<div class="alert alert-primary" role="alert">
+<button class="close" (click)="closeAlert()"> &times;</button>
+<strong>Successfully Saved</strong>
+</div>
+</div>
+

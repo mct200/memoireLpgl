@@ -1,0 +1,111 @@
+
+<app-admin></app-admin>
+    <head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Ajouter une consultation</title>
+    </head>
+    <body id="body-pd">
+    	 <!--===== SIDE BAR =====-->
+
+
+        <div class="container-fluid" style="margin-top: 100px;">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800"><b>Ajouter une consultation</b> </h1>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+
+		        <div class="alert alert-success" role="alert" >
+		        	Consultation ajoutée
+		        </div>
+
+
+            <div class="col-xl-12 col-lg-10">
+                <div class="card shadow mb-4">
+
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp;Informations de la consultation</h6>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+	                    <form action="/CabinetMedicale/AddConsultation?id=<%=id_patient %>" method="POST" style="color: black;">
+	                    	<input type="hidden" class="form-control" name="id" value="" required>
+
+	                    	<div class="mb-3">
+		                        <div class="row">
+									<div class="col">
+										<label class="form-label">Date de la consultation</label>
+									  	<input type="DAte" class="form-control" id="ConsultationDate" name="ConsultationDate" required>
+									</div>
+
+									<div class="col">
+										<label class="form-label">Frais de la consultation (FCFA)</label>
+									 	<input type="text" class="form-control" name="price" id="price" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="mb-3 ">
+		                        <div class="row">
+
+								  <div class="col">
+								  	<label class="form-label">Motif de la consultation</label>
+								    <input type="text" class="form-control" name="motif" id="motif" required>
+								  </div>
+
+								</div>
+							</div>
+						 	<div >
+		                        <label style="padding-right:30px;">Voulez-vous ajouter un ordonnance</label>
+		                        <input class="presc" type="radio" name="presc" id="oui" value="oui" >
+		                        <label class="label;bg-primary" for="oui" style="padding-right:30px;">OUI</label>
+		                        <input class="presc" type="radio" name="presc" id="non" checked value="non">
+		                        <label class="label;bg-primary" for="non">NON</label>
+	                   		</div>
+	                    	<div class="mb-3 presc" id="presc" style="display: none">
+		                        <div class="row">
+									<div class="col">
+										<label class="form-label">Titre d'ordonnance</label>
+									  	<input type="text" class="form-control" id="title" name="title" >
+									</div>
+
+									<div class="col">
+										<label class="form-label">Description</label>
+									 	<textarea rows="2" cols="4"class="form-control" name="description" id="description"></textarea>
+
+									</div>
+								</div>
+								<div class="mb-3 ">
+			              <div class="row">
+										<div class="col">
+											<label class="form-label">Liste des médicaments</label>
+										  	<textarea rows="2" cols="4"class="form-control" name="medicationList" id="medicationList"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<button type="submit" class="btn btn-primary" style="margin-right: 20px;">Ajouter</button>
+							<a href="" class="btn btn-danger ">Quitter</a>
+
+						</form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- footer -->
+
+	<!-- fin footer -->
+
