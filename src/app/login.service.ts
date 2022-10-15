@@ -19,9 +19,10 @@ export class LoginService {
    return this.http.post<any> (`${this.apiServerUrl}/login/`, login,{headers});
  }
   public getUsers(){
-    let email="coumbissthiam96@gmail.com";
-    let password="passer";
-    const headers=new HttpHeaders({Authorization:'Basic'+btoa(email+":"+password)})
-   return this.http.get("http://localhost:8080/getUsers",{headers});
+    //let email="coumbissthiam96@gmail.com";
+    //let password="passer";
+    //const headers=new HttpHeaders({Authorization:'Basic'+btoa(email+":"+password)});
+   // return this.http.get<any> (`${this.apiServerUrl}/getUsers/`,{headers});
+   //return this.http.get("http://localhost:8080/getUsers",{headers});
   }
 }
